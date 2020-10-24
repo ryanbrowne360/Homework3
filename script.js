@@ -133,7 +133,7 @@ if (userinput.numeric){
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("password");
+  var passwordText = document.querySelector("#password");
   Math.random().toString(36).slice(2)
 
   passwordText.value = password;
