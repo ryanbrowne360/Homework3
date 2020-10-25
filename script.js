@@ -90,12 +90,13 @@ var specialCharacters = [
 
 
 var generateBtn = document.querySelector("#generate");
+
+
 function userinputfunction() {
 var passwordlength=prompt("How many characters would you like your password to be? Must be no less than 8, and no more than 128.")
 if(passwordlength<8 || passwordlength>128){
   alert("This password length is invalid")
   return
-
 } 
 var Scharacters=confirm("Would you like to include any special characters?")
 var UppercaseC=confirm("Would you like to include capital letters in your password?")
@@ -103,33 +104,40 @@ var LowercaseC=confirm("would you like to include lower cased letters in your pa
 var numeric=confirm("Would you like to add any numbers to your password?")
 return {passwordlength:passwordlength,Scharacters:Scharacters,UppercaseC:UppercaseC,Lowercasec:LowercaseC,numeric:numeric}
 }
-function generatePassword(){    
-  var userinput=userinputfunction()
-  console.log(userinput) 
+function generatePassword() {
+  var userinput = userinputfunction()
+  console.log(userinput)
 
-var possiblecharacters=[]
-console.log (possiblecharacters)
+  var possiblecharacters = []
+  var guaranteedCharactors = []
+  console.log(possiblecharacters)
 
-if (userinput.Scharacters){
- possiblecharacters=possiblecharacters.concat(specialCharacters)
-}
-if (userinput.Uppercasec){
-  
-  possiblecharacters=possiblecharacters.concat(upperCasedCharacters)
+  if (userinput.Scharacters) {
+
+    possiblecharacters = possiblecharacters.concat(specialCharacters)
+  }
+  if (userinput.Uppercasec) {
+
+    possiblecharacters = possiblecharacters.concat(upperCasedCharacters)
+  }
+
+  if (userinput.LowercaseC) {
+
+    possiblecharacters = possiblecharacters.concat(lowerCasedCharacters)
+  }
+
+  if (userinput.numeric) {
+
+    possiblecharacters = possiblecharacters.concat(numericCharacters)
+  }
+
+  for(var i = 0; i < userinput.passwordlength; i++){
+    guaranteedCharactors.push(possiblecharacters[Math.floor(Math.random() * possiblecharacters.length)])
+  }
+
+  console.log(guaranteedCharactors)
 }
 
-if (userinput.LowercaseC){
-  
-  possiblecharacters=possiblecharacters.concat(lowerCasedCharacters)
-}
-
-if (userinput.numeric){
-  
-  possiblecharacters=possiblecharacters.concat(numericCharacters)
-}
-
- console.log (possiblecharacters)
-}
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -139,6 +147,8 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
+
 
 
 // Add event listener to generate button
@@ -159,7 +169,7 @@ WHEN prompted for the length of the password
 THEN I choose a length of at least 8 characters and no more than 128 characters ~
 WHEN prompted for character types to include in the password
 THEN I choose lowercase, uppercase, numeric, and/or special characters~
-WHEN I answer each prompt
+--WHEN I answer each prompt
 THEN my input should be validated and at least one character type should be selected
 WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
