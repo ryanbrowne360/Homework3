@@ -91,7 +91,6 @@ var specialCharacters = [
 
 var generateBtn = document.querySelector("#generate");
 
-
 function userinputfunction() {
 var passwordlength=prompt("How many characters would you like your password to be? Must be no less than 8, and no more than 128.")
 if(passwordlength<8 || passwordlength>128){
@@ -135,10 +134,15 @@ function generatePassword() {
     guaranteedCharactors.push(possiblecharacters[Math.floor(Math.random() * possiblecharacters.length)])
   }
 
-  console.log(guaranteedCharactors)
+  document.getElementById("password").innerHTML = guaranteedCharactors
 }
 
+
+
+
 // Write password to the #password input
+//var writePass = document.getElementById("password")
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
