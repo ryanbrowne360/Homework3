@@ -89,7 +89,7 @@ var specialCharacters = [
  ];
 
 
-var generateBtn = document.querySelector("#generate");
+ var generateBtn = document.querySelector("#generate");
 
  function userinputfunction() {
  var passwordlength=prompt("How many characters would you like your password to be? Must be no less than 8, and no more than 128.")
@@ -143,8 +143,8 @@ var generateBtn = document.querySelector("#generate");
  function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  
-  passwordText.value = password;
+ 
+  passwordText.value = password; }
 
 
   //generateBtn.addEventListener("click", writePassword);
@@ -152,7 +152,7 @@ var generateBtn = document.querySelector("#generate");
 
 
  // Add event listener to generate button
-  generateBtn.addEventListener("click", writePassword);
+ generateBtn.addEventListener("click", writePassword);
 
  /*
  GIVEN I need a new, secure password 
