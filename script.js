@@ -91,19 +91,21 @@ var specialCharacters = [
 
 var generateBtn = document.querySelector("#generate");
 
-function userinputfunction() {
-var passwordlength=prompt("How many characters would you like your password to be? Must be no less than 8, and no more than 128.")
-if(passwordlength<8 || passwordlength>128){
+ function userinputfunction() {
+ var passwordlength=prompt("How many characters would you like your password to be? Must be no less than 8, and no more than 128.")
+ if(passwordlength<8 || passwordlength>128){
   alert("This password length is invalid")
   return
-} 
-var Scharacters=confirm("Would you like to include any special characters?")
-var UppercaseC=confirm("Would you like to include capital letters in your password?")
-var LowercaseC=confirm("would you like to include lower cased letters in your password?")
-var numeric=confirm("Would you like to add any numbers to your password?")
-return {passwordlength:passwordlength,Scharacters:Scharacters,UppercaseC:UppercaseC,Lowercasec:LowercaseC,numeric:numeric}
-}
-function generatePassword() {
+ } 
+ var Scharacters=confirm("Would you like to include any special characters?")
+ var UppercaseC=confirm("Would you like to include capital letters in your password?")
+ var LowercaseC=confirm("would you like to include lower cased letters in your password?")
+ var numeric=confirm("Would you like to add any numbers to your password?")
+ return {passwordlength:passwordlength,Scharacters:Scharacters,UppercaseC:UppercaseC,Lowercasec:LowercaseC,numeric:numeric}
+ }
+
+
+ function generatePassword() {
   var userinput = userinputfunction()
   console.log(userinput)
 
@@ -133,51 +135,38 @@ function generatePassword() {
   for(var i = 0; i < userinput.passwordlength; i++){
     guaranteedCharactors.push(possiblecharacters[Math.floor(Math.random() * possiblecharacters.length)])
   }
-
-  document.getElementById("password").innerHTML = guaranteedCharactors
-}
-
+  return {guaranteedCharactors}
+ }
 
 
 
-// Write password to the #password input
-//var writePass = document.getElementById("password")
-
-function writePassword() {
+ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  Math.random().toString(36).slice(2)
-
+  
   passwordText.value = password;
 
-}
+
+  //generateBtn.addEventListener("click", writePassword);
 
 
 
+ // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-
-
-
-
-
-/*
-GIVEN I need a new, secure password 
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria ~
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters ~
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters~
---WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-*/
-
+ /*
+ GIVEN I need a new, secure password 
+ WHEN I click the button to generate a password
+ THEN I am presented with a series of prompts for password criteria ~
+ WHEN prompted for password criteria
+ THEN I select which criteria to include in the password
+ WHEN prompted for the length of the password
+ THEN I choose a length of at least 8 characters and no more than 128 characters ~
+ WHEN prompted for character types to include in the password
+ THEN I choose lowercase, uppercase, numeric, and/or special characters~
+ --WHEN I answer each prompt
+ THEN my input should be validated and at least one character type should be selected
+ WHEN all prompts are answered
+ THEN a password is generated that matches the selected criteria
+ WHEN the password is generated
+ THEN the password is either displayed in an alert or written to the page */
