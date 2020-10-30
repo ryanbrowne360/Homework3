@@ -116,6 +116,7 @@ var specialCharacters = [
   if (userinput.Scharacters) {
 
     possiblecharacters = possiblecharacters.concat(specialCharacters)
+     console.log (possiblecharacters)
   }
   if (userinput.Uppercasec) {
 
@@ -135,7 +136,7 @@ var specialCharacters = [
   for(var i = 0; i < userinput.passwordlength; i++){
     guaranteedCharactors.push(possiblecharacters[Math.floor(Math.random() * possiblecharacters.length)])
   }
-  return {guaranteedCharactors}
+  return guaranteedCharactors
  }
 
 
