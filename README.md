@@ -1,4 +1,4 @@
-Password Generator Application!
+# [Password Generator Application] (https://github.com/ryanbrowne360/Homework3.git)
 
 Description:
 
@@ -19,15 +19,15 @@ Credits:
 *JavaScript*
 *HTML*
 *CSS*
-*Ryan Browne Software Developer*
+*Ryan Browne Software Developer* [Ryan Browne] (https://github.com/ryanbrowne360/)
+
+References:
+
+- [w3schools](https://www.w3schools.com/)
+- [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
 
 License:
 
 No License is required. You are free to use and modify this program as desired.
 
-	<a href=”https://twitter.com/your_twitter_username_here"><img src=”https://img.shields.io/twitter/follow/your_twitter_username_here?label=Follow&style=social"></a>
-    
-
-    
-
-
+	[Test] (https://img.shields.io/badge/visual-studio-app-center/builds/:owner/:app/:branch/:token)
