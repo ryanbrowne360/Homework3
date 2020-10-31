@@ -15,11 +15,11 @@ This programmed is designed to be used by people who want to generate a random, 
 
 Credits:
 
-*Google Chrome*
-*JavaScript*
-*HTML*
-*CSS*
-*Ryan Browne Software Developer* [Ryan Browne](https://github.com/ryanbrowne360/)
+- *Google Chrome*
+- *JavaScript*
+- *HTML*
+- *CSS*
+- *Ryan Browne Software Developer* [Ryan Browne](https://github.com/ryanbrowne360/)
 
 References:
 
