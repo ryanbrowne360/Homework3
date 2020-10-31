@@ -9,6 +9,8 @@ Installation:
 This program is very user friendly and does not require any special instructions for installation. As long as they have access to a browser which enables javascript, they are able to deploy this application.
 A recomended browser which has Javascript enabled is google chrome. It can be downloaded here: https://www.google.ca/chrome/
 
+[Link to Application](https://github.com/ryanbrowne360/Homework3.git)
+
 Usage:
 
 This programmed is designed to be used by people who want to generate a random, secure password for whatever they may require.
