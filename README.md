@@ -9,7 +9,7 @@ Installation:
 This program is very user friendly and does not require any special instructions for installation. As long as they have access to a browser which enables javascript, they are able to deploy this application.
 A recomended browser which has Javascript enabled is google chrome. It can be downloaded here: https://www.google.ca/chrome/
 
-[Link to Application](https://github.com/ryanbrowne360/Homework3.git)
+[Link to Application](https://ryanbrowne360.github.io/Homework3/)
 
 Usage:
 
