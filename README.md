@@ -1,4 +1,4 @@
-# [Password Generator Application] (https://github.com/ryanbrowne360/Homework3.git)
+[Password Generator Application](https://github.com/ryanbrowne360/Homework3.git)
 
 Description:
 
@@ -19,7 +19,7 @@ Credits:
 *JavaScript*
 *HTML*
 *CSS*
-*Ryan Browne Software Developer* [Ryan Browne] (https://github.com/ryanbrowne360/)
+*Ryan Browne Software Developer* [Ryan Browne](https://github.com/ryanbrowne360/)
 
 References:
 
