@@ -1,4 +1,8 @@
-
+1) Title
+2)•	Installation
+•	Usage
+•	Credits
+•	License
 
 
 
