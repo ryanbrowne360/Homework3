@@ -33,7 +33,9 @@ License:
 No License is required. You are free to use and modify this program as desired.
 
 ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
+![HTML](https://img.shields.io/badge/HTML-100%25-orange)
+![HTML](https://img.shields.io/badge/CSS-100%25-yellowgreen)
 
-[image](https://github.com/ryanbrowne360/Homework3/blob/main/Screenshot%202020-10-31%20122233.png)
+![image](https://github.com/ryanbrowne360/Homework3/blob/main/Screenshot%202020-10-31%20122233.png)
 
 	
